@@ -19,4 +19,8 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "rb"))
 
-
+count = 0
+for person, entry in enron_data.items():
+    if "Skilling Jeffrey K".upper() in person:
+        print(person)
+        print(entry)
