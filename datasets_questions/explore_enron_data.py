@@ -21,6 +21,15 @@ enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "rb"
 
 count = 0
 for person, entry in enron_data.items():
-    if "Skilling Jeffrey K".upper() in person:
-        print(person)
+    '''
+    if "Lay Kenneth".upper() in person:
         print(entry)
+    if "Skilling Jeffrey".upper() in person:
+        print(entry)
+    if "Fastow Andrew".upper() in person:
+        print(entry)
+    '''
+    if entry['total_payments'] == 'NaN':
+        count = count + 1
+print(count)
+print(len(enron_data))
